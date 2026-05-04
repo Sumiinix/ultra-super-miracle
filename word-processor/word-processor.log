@@ -1,0 +1,94 @@
+
+
+[2026-05-04T04:02:44.552Z]
+{
+  "word": "unbe",
+  "stats": {
+    "word": "unbe",
+    "length": 4,
+    "vowels": 2,
+    "consonants": 2,
+    "uniqueChars": 4,
+    "charFrequency": {
+      "u": 1,
+      "n": 1,
+      "b": 1,
+      "e": 1
+    },
+    "isAlphanumeric": true,
+    "isPalindrome": false,
+    "reversed": "ebnu",
+    "uppercase": "UNBE",
+    "lowercase": "unbe"
+  },
+  "patterns": {
+    "dotted": "u.b.",
+    "alternating": "UnBe",
+    "reversed": "ebnu",
+    "charIndices": {
+      "u": [
+        0
+      ],
+      "n": [
+        1
+      ],
+      "b": [
+        2
+      ],
+      "e": [
+        3
+      ]
+    },
+    "substrings": [
+      "u",
+      "un",
+      "unb",
+      "unbe",
+      "n",
+      "nb",
+      "nbe",
+      "b",
+      "be",
+      "e"
+    ],
+    "wordChain": [
+      "u",
+      "un",
+      "unb",
+      "unbe"
+    ]
+  },
+  "rotations": [
+    "unbe",
+    "nbeu",
+    "beun",
+    "eunb"
+  ],
+  "numeric": {
+    "asciiSum": 426,
+    "asciiProduct": 127387260,
+    "charCodes": [
+      {
+        "char": "u",
+        "code": 117
+      },
+      {
+        "char": "n",
+        "code": 110
+      },
+      {
+        "char": "b",
+        "code": 98
+      },
+      {
+        "char": "e",
+        "code": 101
+      }
+    ],
+    "charCodeSum": 426,
+    "simpleHash": 3594396
+  },
+  "morseCode": "..- -. -... .",
+  "phonetic": "O-O-n-b-E-E",
+  "timestamp": "2026-05-04T04:02:44.551Z"
+}
