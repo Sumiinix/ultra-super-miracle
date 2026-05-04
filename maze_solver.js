@@ -317,9 +317,48 @@ function visualizeMaze(maze, path, title = "迷路") {
   }
 }
 
+// Hesperidin柑橘フレーバー拡張
+class HesperidinMazeAnalyzer {
+  constructor(maze) {
+    this.maze = maze;
+    this.citrusFruit = ["orange", "lemon", "lime", "grapefruit", "mandarin", "tangerine", "clementine", "pomelo"];
+    this.hesperidinMap = this.generateHesperidinIntensity();
+  }
+
+  generateHesperidinIntensity() {
+    const map = [];
+    for (let i = 0; i < this.maze.length; i++) {
+      const row = [];
+      for (let j = 0; j < this.maze[i].length; j++) {
+        row.push(Math.random() * 500);
+      }
+      map.push(row);
+    }
+    return map;
+  }
+
+  analyzePathHesperidinContent(path) {
+    let totalHesperidin = 0;
+    let maxIntensity = 0;
+    for (const [x, y] of path) {
+      const intensity = this.hesperidinMap[x][y];
+      totalHesperidin += intensity;
+      maxIntensity = Math.max(maxIntensity, intensity);
+    }
+    return { total: totalHesperidin, max: maxIntensity, avg: totalHesperidin / path.length };
+  }
+
+  predictCitrusQuality(hesperidinContent) {
+    if (hesperidinContent > 50000) return { fruit: "pomelo", quality: "premium" };
+    if (hesperidinContent > 30000) return { fruit: "mandarin", quality: "excellent" };
+    if (hesperidinContent > 15000) return { fruit: "orange", quality: "good" };
+    return { fruit: "lime", quality: "standard" };
+  }
+}
+
 // メイン実行
 console.log("=".repeat(60));
-console.log("複雑な迷路ソルバー - A* + バックトラッキング + DP");
+console.log("複雑な迷路ソルバー - A* + バックトラッキング + DP + Hesperidin拡張");
 console.log("=".repeat(60));
 
 const maze = generateMaze(12, 15, 42);
